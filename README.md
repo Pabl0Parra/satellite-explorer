@@ -12,7 +12,7 @@ You need to have [git](https://git-scm.com/) and [npm](https://www.npmjs.com/) i
 Clone this repository to your computer with the following command:
 
 ```sh
-git clone git@github.com:RalucaNicola/satellite-explorer.git
+git clone git@github.com:Pabl0Parra/satellite-explorer.git
 ```
 
 Install the modules that are need to run the app:

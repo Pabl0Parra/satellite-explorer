@@ -18,8 +18,25 @@ import dataStore from './stores/DataStore';
 import satelliteStore from './stores/SatelliteStore';
 import { observer } from 'mobx-react';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const App = observer(() => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const userLang = navigator.language || navigator.userLanguage;
+
+    if (userLang === 'es') {
+      navigate('/es');
+    } else if (userLang === 'fr') {
+      navigate('/fr');
+    } else if (userLang === 'de') {
+      navigate('/de');
+    } else {
+      navigate('/es');
+    }
+  }, [navigate]);
+
   useEffect(() => {
     if (!appStore.isLoading) {
       const hashParams = parseHash();
